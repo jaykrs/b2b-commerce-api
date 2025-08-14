@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "boxes",
+  "info": {
+    "singularName": "box",
+    "pluralName": "boxes",
+    "displayName": "box"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "dimension": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "resource": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

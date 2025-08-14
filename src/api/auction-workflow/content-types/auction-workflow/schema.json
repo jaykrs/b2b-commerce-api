@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "auction_workflows",
+  "info": {
+    "singularName": "auction-workflow",
+    "pluralName": "auction-workflows",
+    "displayName": "auction-workflow"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "auctionid": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "boat": {
+      "type": "string"
+    },
+    "baseprice": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "agent": {
+      "type": "string"
+    },
+    "port": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shipping_workflows",
+  "info": {
+    "singularName": "shipping-workflow",
+    "pluralName": "shipping-workflows",
+    "displayName": "shipping-workflow"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "source": {
+      "type": "string"
+    },
+    "destination": {
+      "type": "string"
+    },
+    "drivername": {
+      "type": "string"
+    },
+    "driverphone": {
+      "type": "string"
+    },
+    "vehicledetails": {
+      "type": "string"
+    },
+    "product": {
+      "type": "string"
+    },
+    "remarks": {
+      "type": "richtext"
+    },
+    "status_data": {
+      "type": "string"
+    },
+    "shippingdt": {
+      "type": "datetime"
+    }
+  }
+}

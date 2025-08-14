@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "boats",
+  "info": {
+    "singularName": "boat",
+    "pluralName": "boats",
+    "displayName": "boat"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "ownername": {
+      "type": "string"
+    },
+    "ownerphone": {
+      "type": "string"
+    },
+    "ownercity": {
+      "type": "string"
+    },
+    "owneremail": {
+      "type": "email"
+    },
+    "boatcategory": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "order_workflows",
+  "info": {
+    "singularName": "order-workflow",
+    "pluralName": "order-workflows",
+    "displayName": "order-workflow"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "vendorId": {
+      "type": "string"
+    },
+    "product_list": {
+      "type": "string"
+    },
+    "ordervalue": {
+      "type": "string"
+    },
+    "details": {
+      "type": "blocks"
+    },
+    "orderdt": {
+      "type": "date"
+    },
+    "orderstatus": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "delivery_channel": {
+      "type": "string"
+    },
+    "delivery_address": {
+      "type": "string"
+    },
+    "delivery_location": {
+      "type": "string"
+    },
+    "delivery_contact": {
+      "type": "string"
+    },
+    "delivery_notification": {
+      "type": "string"
+    },
+    "completion_status": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

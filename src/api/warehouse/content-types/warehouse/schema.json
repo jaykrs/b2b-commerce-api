@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "warehouses",
+  "info": {
+    "singularName": "warehouse",
+    "pluralName": "warehouses",
+    "displayName": "Warehouse"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "warehouseid": {
+      "type": "string",
+      "unique": true
+    },
+    "name": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "area": {
+      "type": "string"
+    },
+    "manager": {
+      "type": "string"
+    },
+    "managername": {
+      "type": "string"
+    },
+    "managerphone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "startdt": {
+      "type": "date"
+    }
+  }
+}

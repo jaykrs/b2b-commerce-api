@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "employees",
+  "info": {
+    "singularName": "employee",
+    "pluralName": "employees",
+    "displayName": "employee"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "empid": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "whatappim": {
+      "type": "string"
+    },
+    "dob": {
+      "type": "date"
+    },
+    "role": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "about": {
+      "type": "richtext"
+    }
+  }
+}
