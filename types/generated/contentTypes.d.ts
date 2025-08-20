@@ -473,42 +473,6 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiAuctionWorkflowAuctionWorkflow
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'auction_workflows';
-  info: {
-    displayName: 'auction-workflow';
-    pluralName: 'auction-workflows';
-    singularName: 'auction-workflow';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    agent: Schema.Attribute.String;
-    auctionid: Schema.Attribute.String;
-    baseprice: Schema.Attribute.String;
-    boat: Schema.Attribute.String;
-    city: Schema.Attribute.String;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    description: Schema.Attribute.RichText;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::auction-workflow.auction-workflow'
-    > &
-      Schema.Attribute.Private;
-    location: Schema.Attribute.String;
-    port: Schema.Attribute.String;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
   collectionName: 'authors';
   info: {
@@ -534,35 +498,6 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiBoatBoat extends Struct.CollectionTypeSchema {
-  collectionName: 'boats';
-  info: {
-    displayName: 'boat';
-    pluralName: 'boats';
-    singularName: 'boat';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    boatcategory: Schema.Attribute.String;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::boat.boat'> &
-      Schema.Attribute.Private;
-    ownercity: Schema.Attribute.String;
-    owneremail: Schema.Attribute.Email;
-    ownername: Schema.Attribute.String;
-    ownerphone: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -739,6 +674,7 @@ export interface ApiOrderWorkflowOrderWorkflow
   extends Struct.CollectionTypeSchema {
   collectionName: 'order_workflows';
   info: {
+    description: '';
     displayName: 'order-workflow';
     pluralName: 'order-workflows';
     singularName: 'order-workflow';
@@ -747,6 +683,7 @@ export interface ApiOrderWorkflowOrderWorkflow
     draftAndPublish: true;
   };
   attributes: {
+    boxid: Schema.Attribute.String;
     completion_status: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     createdAt: Schema.Attribute.DateTime;
@@ -1480,9 +1417,7 @@ declare module '@strapi/strapi' {
       'api::about.about': ApiAboutAbout;
       'api::agent.agent': ApiAgentAgent;
       'api::article.article': ApiArticleArticle;
-      'api::auction-workflow.auction-workflow': ApiAuctionWorkflowAuctionWorkflow;
       'api::author.author': ApiAuthorAuthor;
-      'api::boat.boat': ApiBoatBoat;
       'api::box.box': ApiBoxBox;
       'api::category.category': ApiCategoryCategory;
       'api::demand.demand': ApiDemandDemand;

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "order-workflow",
     "pluralName": "order-workflows",
-    "displayName": "order-workflow"
+    "displayName": "order-workflow",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -49,6 +50,9 @@
     "completion_status": {
       "type": "boolean",
       "default": false
+    },
+    "boxid": {
+      "type": "string"
     }
   }
 }
